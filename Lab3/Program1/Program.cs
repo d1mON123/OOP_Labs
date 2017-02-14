@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Program1
 {
@@ -10,6 +6,18 @@ namespace Program1
     {
         static void Main(string[] args)
         {
+            double length = 0, height = 0, radius = 0;
+            Console.Write("Введiть довжину сторони основи пiрамiди: ");
+            length = double.Parse(Console.ReadLine());
+            Console.Write("Введiть висоту пiрамiди: ");
+            height = double.Parse(Console.ReadLine());
+            Pyramid p = new Pyramid(length, height);
+            p.GetVolume();
+            Console.Write("Введiть радiус кулi: ");
+            radius = double.Parse(Console.ReadLine());
+            Sphere s = new Sphere(radius);
+            s.GetVolume();
+            Console.ReadLine();
         }
     }
 }
